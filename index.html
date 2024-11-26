@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>記憶配對遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginForm" class="login-form">
+            <h2>會員登入</h2>
+            <div class="input-group">
+                <label>帳號</label>
+                <input type="text" id="username">
+                <div id="usernameError" class="error-message"></div>
+            </div>
+            <div class="input-group">
+                <label>密碼</label>
+                <input type="password" id="password">
+                <div id="passwordError" class="error-message"></div>
+            </div>
+            <button onclick="login()">登入</button>
+            <div class="register-link" onclick="showRegisterForm()">
+                還沒有帳號？點此註冊
+            </div>
+        </div>
+
+        <div id="registerForm" class="login-form" style="display: none;">
+            <h2>註冊新帳號</h2>
+            <div class="input-group">
+                <label>帳號</label>
+                <input type="text" id="regUsername">
+                <div id="regUsernameError" class="error-message"></div>
+            </div>
+            <div class="input-group">
+                <label>密碼</label>
+                <input type="password" id="regPassword">
+                <div id="regPasswordError" class="error-message"></div>
+            </div>
+            <div class="input-group">
+                <label>確認密碼</label>
+                <input type="password" id="confirmPassword">
+                <div id="confirmPasswordError" class="error-message"></div>
+            </div>
+            <button onclick="register()">註冊</button>
+            <div class="register-link" onclick="showLoginForm()">
+                已有帳號？點此登入
+            </div>
+        </div>
+
+        <div id="gameContainer" class="game-container" style="display: none;">
+            <div class="header">
+                <div class="user-info">
+                    歡迎, <span id="userDisplayName"></span>
+                </div>
+                <button onclick="logout()">登出</button>
+            </div>
+            <h2>記憶配對遊戲</h2>
+            <div class="score">
+                配對次數：<span id="score">0</span>
+            </div>
+            <div id="memoryGame" class="memory-game"></div>
+            <button onclick="restartGame()">重新開始</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
