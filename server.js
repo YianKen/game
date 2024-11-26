@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Yian0610_Ken0518', // 替換成你的MySQL密碼
+    password: '******', // 替換成你的MySQL密碼
     database: 'login_game_db' // 替換成你的資料庫名稱
 });
 
